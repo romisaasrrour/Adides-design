@@ -1,0 +1,135 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif ;
+    
+}
+body{
+    background:linear-gradient( rgb(20, 20, 20),rgb(82, 82, 82));
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+ background-color: red;
+    position: absolute;
+    clip-path: circle(40% at right 70%);
+   z-index: -1; 
+}
+.continer{
+    width: 80%;
+    height: 80%;
+    background-color:rgb(255, 254, 254, 0.1) ;
+    border-radius: 10px;
+
+}
+nav{
+     display:flex;
+     justify-content: space-between;
+     align-items: center;  
+     margin: auto;
+     width: 80%;
+     padding: 20px 0px;
+}
+nav .logo{
+    text-decoration: none;
+    color:white ;
+    text-transform:uppercase ;
+    letter-spacing:3px ;
+    font-weight: 700;
+    font-size: 32px;
+}
+nav ul li {
+display: inline-block;
+ margin-right: 10px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white ;
+    font-size:18px ;
+    font-weight: 500;
+}
+nav ul li a:hover{
+    color:  red;
+}
+.content{
+   display: flex;
+   justify-content: space-between;
+   align-items:center ;  
+   height:100% ;
+   width:80%;
+   margin: auto;
+   overflow: hidden;
+} 
+.content .text{
+    width:40% ;
+    color:white;
+
+
+}
+.content .text h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size:30px;
+    
+
+    }
+    .content .text p{
+        font-size: 18px;
+         margin: 10px 0px;
+        line-height: 25px;
+        letter-spacing:1 px ;
+
+
+    }
+
+  .content .imeg{
+    width: 40%;
+  }
+  .content .imeg img{
+     width: 400px;  
+  }
+ @media (min-width:950px)and(max-width:1150px) {
+    
+    .content .imeg {
+    width: 200px;
+        }
+
+ }
+ @media (max-width:950px){
+    .content , nav{
+        flex-direction: column;
+     justify-content: center;
+    }
+    .content .imeg, .content .text{
+        width:80%
+    }
+    body::after{
+        clip-path: circle(50% at bottom);
+    }
+
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
